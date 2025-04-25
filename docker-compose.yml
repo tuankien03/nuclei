@@ -1,0 +1,71 @@
+services:
+  wordpress_653:
+    image: wordpress:6.5.3
+    platform: linux/arm64
+    container_name: wordpress_653
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress653
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: 12345678
+    volumes:
+      - wordpress653_data:/var/www/html
+    depends_on:
+      - db
+
+  wordpress_60:
+    image: wordpress:6.0
+    platform: linux/arm64
+    container_name: wordpress_60
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress60
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: 12345678
+    volumes:
+      - wordpress60_data:/var/www/html
+    depends_on:
+      - db
+
+  wordpress_5.1:
+    image: wordpress:5.1
+    platform: linux/arm64
+    container_name: wordpress_51
+    restart: always
+    ports:
+      - "8082:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress51
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: 12345678
+    volumes:
+      - wordpress51_data:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    platform: linux/amd64     # ⚠ Khuyên dùng MySQL 5.7 để tránh lỗi tương thích
+    container_name: shared_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: 12345678
+      MYSQL_DATABASE: wordpress653   # tạo sẵn 1 DB, còn lại sẽ dùng init SQL
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./mysql-init:/docker-entrypoint-initdb.d
+
+volumes:
+  wordpress653_data:
+  wordpress60_data:
+  wordpress51_data:
+  db_data:
