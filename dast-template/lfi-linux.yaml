@@ -1,0 +1,42 @@
+id: linux-lfi-fuzz
+
+info:
+  name: Local File Inclusion - Linux
+  author: tuankine03
+  severity: high
+  reference:
+    - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Directory%20Traversal/Intruder/directory_traversal.txt
+    - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion
+  tags: lfi,dast,linux
+
+http:
+  - pre-condition:
+      - type: dsl
+        dsl:
+          - 'method == "GET"'
+
+    payloads:
+      nix_fuzz: ./payloads/lfi-linux-payload.txt
+
+    fuzzing:
+      - part: query
+        type: replace 
+        mode: multiple 
+        fuzz:
+          - '{{nix_fuzz}}'
+
+    stop-at-first-match: true
+    matchers:
+      - type: regex
+        part: body
+        regex:
+          - '{{nix_fuzz}}'
+          - "root:.*:0:0:" 
+          - "daemon:.*:[0-9]*:[0-9]*:"
+          - "^[^\\s]+$" 
+          - "Linux(?: release)? \\d+\\.\\d+" 
+          - "Debian" 
+          - "Ubuntu"
+          - "Linux version \\d+\\.\\d+" 
+          - "/usr/(?:s)?bin/[^\\s]+" 
+          - "-c\\s" 

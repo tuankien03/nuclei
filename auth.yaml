@@ -1,0 +1,6 @@
+static:
+  - type: basicauth
+    domains:
+      - localhost
+    username: tuankien03
+    password: Kien12032003

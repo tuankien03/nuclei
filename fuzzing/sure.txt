@@ -1,7 +1,0 @@
-suretriggers
-suretriggers/v1
-suretriggers/v1/user/create
-suretriggers/v1/automation/action
-sure-triggers
-sure-triggers/v1
-sure-triggers/v1/automation/action

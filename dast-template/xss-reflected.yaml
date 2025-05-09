@@ -1,0 +1,39 @@
+id: wordpress-xss-get-fuzz
+
+info:
+  name: WordPress Reflected XSS via GET Fuzzing
+  author: tuankien03
+  severity: medium
+  tags: xss,rxss,dast
+
+variables:
+  num: "{{rand_int(10000, 99999)}}"
+
+http:
+  - pre-condition:
+      - type: dsl
+        dsl:
+          - method == "GET"
+
+    payloads:
+      xss-get-payloads: ./payloads/xss-reflected-payloads.txt
+
+    fuzzing:
+      - part: query
+        type: postfix
+        mode: single
+        fuzz:
+          - "{{num}}{{xss-get-payloads}}"
+
+    stop-at-first-match: true
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "{{num}}{{xss-get-payloads}}"
+
+      - type: word
+        part: header
+        words:
+          - "text/html"

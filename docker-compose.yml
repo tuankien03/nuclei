@@ -1,4 +1,21 @@
 services:
+  wordpress_last:
+    image:  wordpress:latest
+    platform: linux/arm64
+    container_name: wordpress_latest
+    restart: always
+    ports:
+      - "8083:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpresslastest
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: 12345678
+    volumes:
+      - wordpresslastest_data:/var/www/html
+    depends_on:
+      - db
+
   wordpress_653:
     image: wordpress:6.5.3
     platform: linux/arm64
@@ -68,4 +85,6 @@ volumes:
   wordpress653_data:
   wordpress60_data:
   wordpress51_data:
+  wordpresslastest_data:
   db_data:
+  
