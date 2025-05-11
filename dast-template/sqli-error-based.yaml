@@ -20,7 +20,9 @@ http:
       injection: ./payloads/sqli-payloads.txt
 
     fuzzing:
-      - part: query
+      - parts: 
+          - query
+          - path
         type: postfix
         fuzz:
           - "{{injection}}"

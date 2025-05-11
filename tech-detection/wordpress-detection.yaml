@@ -1,0 +1,53 @@
+id: detect-wordpress-cms
+
+info:
+  name: WordPress CMS Detection
+  author: tuankien03
+  severity: info
+  description: Phát hiện trang web có đang chạy trên nền tảng WordPress hay không bằng cách kiểm tra các dấu hiệu phổ biến.
+  tags: tech,cms,wordpress
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/"
+
+    matchers-condition: or 
+    matchers:
+      - type: word
+        part: body 
+        words:
+          - '<meta name="generator" content="WordPress'
+          - 'content="WordPress.org"'
+        condition: or
+        case-insensitive: true
+
+      - type: word
+        part: body
+        words:
+          - "/wp-content/"
+          - "/wp-includes/"
+          - "wp-block-library-css" 
+          - "class=\"wp-image-"
+          - "wp-embed.min.js" 
+        condition: or
+        case-insensitive: true
+
+      - type: word
+        part: header
+        words:
+          - 'Link: <{{BaseURL}}/wp-json/' 
+          - 'Link: <{{BaseURL}}/?p=' 
+          - 'rel="https://api.w.org/"'
+        condition: or
+        case-insensitive: true
+
+    extractors:
+      # Trích xuất phiên bản WordPress nếu có từ meta tag
+      - type: regex
+        name: version
+        part: body
+        group: 1 # Lấy group đầu tiên trong regex
+        regex:
+          - '(?i)<meta name="generator" content="WordPress ([0-9]+\.[0-9]+(\.[0-9]+)?)"' # (?i) để không phân biệt hoa thường
+ 

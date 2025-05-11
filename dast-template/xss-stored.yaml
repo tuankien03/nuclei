@@ -10,18 +10,18 @@ variables:
   num: "{{rand_int(10000, 99999)}}"
 
 http:
-  - pre-condition:
-      - type: dsl
-        dsl:
-          - method == "GET"
+  - raw:
+      - |
+        GET /test HTTP/1.1
+        Host: {{Hostname}}
+
+        {"user_name": "1","password": "1"}
 
     payloads:
       xss-get-payloads: ./payloads/xss-reflected-payloads.txt
 
     fuzzing:
-      - parts: 
-          - query
-          - path
+      - part: body
         type: postfix
         mode: single
         fuzz:
