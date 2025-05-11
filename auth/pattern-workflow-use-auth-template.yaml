@@ -1,0 +1,17 @@
+id: wordpress-authenticated-workflow
+
+info:
+  name:  WordPress Authenticated Workflow
+  author: tuankien03
+
+vars:
+  target_username: {{username}}
+  target_password: {{password}}
+workflows:
+  - template: ./wordpress-login-raw-auth-extractor-debug.yaml 
+    vars:
+      username: "{{target_username}}"
+      password: "{{target_password}}"
+
+
+  - template: ./template-that-needs-auth.yaml

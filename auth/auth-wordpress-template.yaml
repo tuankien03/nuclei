@@ -1,0 +1,69 @@
+id: wordpress-login-raw-auth-extractor-debug
+
+info:
+  name: WordPress Login (Raw Request) and Cookie Extractor (Debug for 200 OK with error)
+  author: tuankien03
+  severity: info
+  # ... (phần còn lại của info) ...
+
+variables:
+  username: "tuankien03"
+  password: "Kien12032003"
+  wp_login_path: "/wp-login.php"
+  wp_admin_path: "/wp-admin/"
+
+http:
+  - raw:
+      - |
+        POST {{wp_login_path}} HTTP/1.1
+        Host: {{Hostname}}
+        Origin: {{RootURL}}
+        Content-Type: application/x-www-form-urlencoded
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36
+        Cookie: wordpress_test_cookie=WP%20Cookie%20check;
+
+        log={{url_encode(username)}}&pwd={{url_encode(password)}}&wp-submit=Log+In&redirect_to={{url_encode(RootURL + wp_admin_path)}}&testcookie=1
+    redirects: false
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 302
+
+      - type: regex
+        part: header
+        regex:
+          - "(?i)Set-Cookie: wordpress_logged_in_[a-f0-9]+"
+
+    extractors:
+      - type: regex
+        name: login_error_message # Giữ lại để biết nếu có lỗi
+        part: body
+        regex:
+          - '(?s)<div id="login_error"[^>]*>.*?<p>(.*?)</p>'
+        group: 1
+
+      - type: regex
+        name: extracted_auth_cookie_header_value 
+        part: header
+        regex:
+          - "(?i)Set-Cookie: (wordpress_logged_in_[a-f0-9]+=[^;]+)"
+          - "(?i)Set-Cookie: (wordpress_sec_[a-f0-9]+=[^;]+)"
+          - "(?i)Set-Cookie: (wordpress_[a-f0-9_]+=[^;]+)"   
+          - "(?i)Set-Cookie: (wp-settings-[0-9]+=[^;]+)"
+          - "(?i)Set-Cookie: (wp-settings-time-[0-9]+=[^;]+)"
+        group: 1 
+
+      - type: regex
+        name: wordpress_logged_in_value
+        part: header
+        regex:
+          - "(?i)Set-Cookie: wordpress_logged_in_[a-f0-9]+=([^;]+)"
+        group: 1
+
+      - type: regex
+        name: wordpress_sec_value
+        part: header
+        regex:
+          - "(?i)Set-Cookie: wordpress_sec_[a-f0-9]+=([^;]+)"
+        group: 1

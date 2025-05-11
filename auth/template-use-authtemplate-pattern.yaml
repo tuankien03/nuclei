@@ -1,0 +1,38 @@
+id: wordpress-template-use-authtemplate-pattern
+info:
+  name: wordpress template use authtemplate pattern
+  author: tuankien03 
+  severity: info 
+  description: |
+  tags: wordpress, authenticated
+
+vars:
+  auth_cookie_header_string: "{{join('; ', extracted_wp_cookies_for_header)}}"
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-admin/profile.php"
+    headers:
+      Cookie: "{{join('; ', extracted_wp_cookies_for_header)}}"
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200 
+      - type: word
+        part: body
+        words:
+          # - your condition
+        condition: or 
+        case-insensitive: true
+
+      - type: word
+        part: body
+        words:
+          - "id=\"loginform\"" 
+          - "wp-login.php"
+        negative: true
+        condition: or
